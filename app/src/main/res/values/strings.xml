@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">lab6</string>
+
+    <string-array name="images_names">
+        <item>Aprilla</item>
+        <item>autoprima</item>
+        <item>czaszka</item>
+        <item>fiat</item>
+        <item>opona</item>
+        <item>orel</item>
+        <item>pojazd</item>
+        <item>yamaha</item>
+        <item>zuzlowiec</item>
+    </string-array>
+
+    <string-array name="category_names">
+    <item>Kategoria1</item>
+    <item>Kategoria2</item>
+    <item>Kategoria3</item>
+    <item>Kategoria4</item>
+    <item>Kategoria5</item>
+    <item>Kategoria6</item>
+    <item>Kategoria7</item>
+    <item>Kategoria8</item>
+</string-array>
+
+    <string-array name="Kategoria1">
+        <item>PodKategoria11</item>
+        <item>PodKategoria21</item>
+        <item>PodKategoria31</item>
+        <item>PodKategoria41</item>
+        <item>PodKategoria51</item>
+        <item>PodKategoria61</item>
+        <item>PodKategoria71</item>
+    </string-array>
+
+    <string-array name="Kategoria2">
+        <item>PodKategoria12</item>
+        <item>PodKategoria22</item>
+        <item>PodKategoria32</item>
+        <item>PodKategoria42</item>
+        <item>PodKategoria52</item>
+        <item>PodKategoria62</item>
+        <item>PodKategoria72</item>
+        <item>PodKategoria82</item>
+    </string-array>
+
+    <string-array name="Kategoria3">
+        <item>PodKategoria13</item>
+        <item>PodKategoria23</item>
+        <item>PodKategoria33</item>
+        <item>PodKategoria43</item>
+        <item>PodKategoria53</item>
+        <item>PodKategoria63</item>
+        <item>PodKategoria73</item>
+        <item>PodKategoria83</item>
+    </string-array>
+
+    <string-array name="Kategoria4">
+        <item>PodKategoria14</item>
+        <item>PodKategoria24</item>
+        <item>PodKategoria34</item>
+        <item>PodKategoria44</item>
+        <item>PodKategoria54</item>
+        <item>PodKategoria64</item>
+        <item>PodKategoria74</item>
+        <item>PodKategoria84</item>
+    </string-array>
+
+    <string-array name="Kategoria5">
+        <item>PodKategoria15</item>
+        <item>PodKategoria25</item>
+        <item>PodKategoria35</item>
+        <item>PodKategoria45</item>
+        <item>PodKategoria55</item>
+        <item>PodKategoria65</item>
+        <item>PodKategoria75</item>
+        <item>PodKategoria85</item>
+    </string-array>
+
+    <string-array name="Kategoria6">
+        <item>PodKategoria16</item>
+        <item>PodKategoria26</item>
+        <item>PodKategoria36</item>
+        <item>PodKategoria46</item>
+        <item>PodKategoria56</item>
+        <item>PodKategoria66</item>
+        <item>PodKategoria76</item>
+        <item>PodKategoria86</item>
+    </string-array>
+
+    <string-array name="Kategoria7">
+        <item>PodKategoria17</item>
+        <item>PodKategoria27</item>
+        <item>PodKategoria37</item>
+        <item>PodKategoria47</item>
+        <item>PodKategoria57</item>
+        <item>PodKategoria67</item>
+        <item>PodKategoria77</item>
+        <item>PodKategoria87</item>
+    </string-array>
+</resources>

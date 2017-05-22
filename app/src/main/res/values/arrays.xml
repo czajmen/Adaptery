@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="images">
+        <item>@drawable/aprilla</item>
+        <item>@drawable/czaszka</item>
+        <item>@drawable/fiat</item>
+        <item>@drawable/opona</item>
+        <item>@drawable/yamaha</item>
+        <item>@drawable/pojazd</item>
+        <item>@drawable/zuzlowiec</item>
+        <item>@drawable/orel</item>
+    </array>
+
+<array name="podKategorie" >
+    <item>@array/Kategoria1</item>
+    <item>@array/Kategoria2</item>
+    <item>@array/Kategoria3</item>
+    <item>@array/Kategoria4</item>
+    <item>@array/Kategoria5</item>
+    <item>@array/Kategoria6</item>
+    <item>@array/Kategoria7</item>
+</array>
+</resources>
