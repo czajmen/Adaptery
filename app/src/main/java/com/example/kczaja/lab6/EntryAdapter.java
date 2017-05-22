@@ -1,6 +1,7 @@
 package com.example.kczaja.lab6;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,12 +23,21 @@ public class EntryAdapter extends ArrayAdapter<entry> {
         mLayoutId = resource;
         mInflater = LayoutInflater.from(context);
     }
+    @NonNull
+    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView==null) {
             convertView = mInflater.inflate(mLayoutId, parent, false);
         }
-        TextView textView = (TextView) convertView.findViewById(R.id.textView);
-        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
+        TextView textView = (TextView) convertView.findViewById(R.id.name);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.logo);
+
+        if(textView == null || imageView == null)
+        {
+            textView = (TextView) convertView.findViewById(R.id.textViewgroup);
+            imageView = (ImageView) convertView.findViewById(R.id.imageView);
+        }
+
         entry entry = getItem(position);
         textView.setText(entry.Name);
         imageView.setImageResource(entry.Logo);

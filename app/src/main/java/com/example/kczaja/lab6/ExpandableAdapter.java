@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -13,65 +15,82 @@ import java.util.List;
  * Created by kczaja on 26.04.2017.
  */
 
-public class ExpandableAdapter extends BaseExpandableListAdapter
-{
-    private final List<entry> data;
+public class ExpandableAdapter extends BaseExpandableListAdapter {
 
-    public ExpandableAdapter(Context context, int resource ,List<entry> data)
-    {
+    private List<entry> entries;
+    private LayoutInflater mInflater;
 
-        this.data = data;
-        Log.d("FareStageExADapter", "Constructor called");
-
+    public ExpandableAdapter(Context context, List<entry> entries) {
+        this.entries = entries;
+        mInflater = LayoutInflater.from(context);
     }
 
     @Override
     public int getGroupCount() {
-        return 0;
+        return entries.size();
     }
 
     @Override
-    public int getChildrenCount(int i) {
-        return 0;
+    public int getChildrenCount(int groupPosition) {
+        return entries.get(groupPosition).getTab().length;
     }
 
     @Override
-    public Object getGroup(int i) {
-        return null;
+    public Object getGroup(int groupPosition) {
+        return entries.get(groupPosition);
     }
 
     @Override
-    public Object getChild(int i, int i1) {
-        return null;
+    public Object getChild(int groupPosition, int childPosition) {
+        return entries.get(groupPosition).getTab()[childPosition];
     }
 
     @Override
     public long getGroupId(int i) {
-        return 0;
+        return i;
     }
 
     @Override
     public long getChildId(int i, int i1) {
-        return 0;
+        return i1;
     }
 
     @Override
     public boolean hasStableIds() {
-        return false;
+        return true;
     }
 
     @Override
-    public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
-        return null;
+    public View getGroupView(int position, boolean b, View convertView, ViewGroup parent) {
+        if (convertView == null) {
+            convertView = mInflater.inflate(R.layout.group_item, parent, false);
+        }
+
+        TextView groupNameTextView = (TextView) convertView.findViewById(R.id.textViewgroup);
+        ImageView logo = (ImageView) convertView.findViewById(R.id.imageView);
+
+        entry entry = (entry) getGroup(position);
+        groupNameTextView.setText(entry.getName());
+        logo.setImageResource(entry.getLogo());
+
+        return convertView;
     }
 
     @Override
-    public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
-        return null;
+    public View getChildView(int groupPosition, int childPosition, boolean b, View convertView, ViewGroup parent) {
+        int layoutId = childPosition % 2 == 0 ? R.layout.left_item : R.layout.right_item;
+        convertView = mInflater.inflate(layoutId, parent, false);
+
+        TextView childNameTextView = (TextView) convertView.findViewById(R.id.childName);
+
+        childNameTextView.setText((String) getChild(groupPosition, childPosition));
+
+        return convertView;
     }
 
     @Override
     public boolean isChildSelectable(int i, int i1) {
-        return false;
+        return true;
     }
 }
+
